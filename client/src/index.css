@@ -1,0 +1,253 @@
+
+.h1{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.two-lines {
+  white-space: pre-wrap;
+  line-height: 1.2em; 
+  height: 2.4em;
+}
+
+.login-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Sets the size ratio between columns */
+  gap: 10px; /* Adds space between columns */
+}
+
+.login-button{
+
+
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #007bff; /* Initial background color */
+  color: white; /* Initial text color */
+  border: none; /* No border */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  border-radius: 10px; /* Rounded corners */
+
+  
+}
+
+
+.login-button:hover {
+  background-color: #03ac1c; 
+}
+
+.login-message{
+  margin-top:30%;
+  font-size: 30px;
+  text-align: center;
+}
+.container {
+    height: 100vh; /* Use the full height of the viewport */
+    width: 100vw;
+  
+  }
+
+  .title-container{
+    text-align: center;
+    
+  }
+
+  .main-container{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr; /* Sets the size ratio between columns */
+    gap: 10px; /* Adds space between columns */
+  }
+
+  .main-title{
+    font-size: 30px;
+    text-align: center;
+    /* margin-top:50px; */
+  }
+  
+  .first-column,
+  .third-column{
+    background-color: #f0f0f0; 
+    padding: 20px;
+    margin-top: 10%; 
+    width: 150px;
+    height:75vh;
+  }
+
+  .second-column{
+    justify-content: center; /* Center the buttons horizontally */
+    text-align: center;
+  }
+.main-options{
+  position:absolute;
+  left:50px;
+  bottom:70px;
+  justify-content: center; /* Center the buttons horizontally */
+  text-align: center;
+  justify-content: space-between;
+  padding-top: 50px;
+
+}
+
+.column-title{ 
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  
+  }
+  
+.activetask-title{
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom:50px;
+  color:#4285F4;
+  
+  }
+
+.column-title,
+ .activetask-title{  
+   
+    margin-bottom: 10px;
+  }
+
+  .task-list {
+    list-style:none;
+    padding-left: 0;
+    overflow-y: auto; /* Allows for scrolling */
+  }
+  
+  .task-list li {
+
+    font-size: 20px;
+    /* margin-bottom: 5px; */
+  }
+
+ 
+  .subtask-container {
+    /* display: flex; */
+    width:auto;
+    padding-top:10px;
+    /* justify-content: center; */
+  }
+  
+  .subtask-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 columns */
+  /*  grid-auto-rows: minmax(100px, auto); /* Automatic row sizing */
+    gap: 10px; /* Gap between grid items */
+  }
+  
+  .subtask-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     border: 1px solid #ccc;
+     color: black;
+    /* background-color: #f0f0f0 ; */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  .icon-login{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding:5px;
+    font-size: 24px;
+
+  }
+  
+  .icon-container {
+    display: inline;
+  }
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding:5px;
+    /* margin-left:3px; */
+  }
+  .icon-large {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding:5px;
+    font-size: 24px; 
+   
+    /* display: flex; */
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center; /* Center the buttons vertically */
+  }
+  
+  
+  .subtask {
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Ensure there's space for the icons */
+    padding-top: 40px; /* Extra padding at the top for the close icon */
+  }
+
+ 
+  .icons, .icon-login{
+    position: absolute;
+    right: 20px; /* Adjust based on your preference */
+    top: 20px; /* Adjust based on your preference */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align icons to the right */
+  }
+  
+  .icon {
+    cursor: pointer;
+    margin-bottom: 5px; /* Space between icons */
+  }
+  
+  .update-icon i, .close-icon i {
+    /* Style your icons here */
+    color: #cf4444; /* Example color */
+  }
+/******************** TOOL TIP *****************************/
+/* Tooltip text */
+.icon-button:hover::before {
+  content: title;
+
+}
+
+
+/*******************************************************/
+  
+  @media (max-width: 768px) { 
+    
+    .main-container {
+        grid-template-columns: 1fr; 
+    }
+    .subtasks-container {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+   
+  }
+
+  @media (max-width: 200px) { 
+    
+    .main-container {
+        grid-template-columns: 1fr; 
+    }
+    .subtasks-container {
+      grid-template-columns: repeat(4, 1fr); 
+    }
+   
+  }
