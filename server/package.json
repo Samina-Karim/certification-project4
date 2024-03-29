@@ -11,5 +11,8 @@
   },
   "keywords": [],
   "author": "Samina",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^8.2.4"
+  }
 }
